@@ -1,11 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from datetime import date
 from dataclasses import dataclass, field
 from typing import List
-import sys
-import logging
 
 
 class IllegalMarksError(Exception):
@@ -36,7 +33,7 @@ class UnknownCommandError(Exception):
 class People:
     name: str
     phone_number: int
-    birthday: list[int]
+    birthday: List[int]
 
 
 @dataclass
@@ -101,8 +98,8 @@ class Man:
 
     def select(self, period):
         # # Проверить сведения людей из списка
-        parts = command.split(' ', maxsplit=2)
-        period = int(parts[1])
+        # parts = command.split(' ', maxsplit=2)
+        # period = int(parts[1])
         result = []
         count = 0
         for people in self.soul:
